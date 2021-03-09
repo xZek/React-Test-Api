@@ -15,7 +15,7 @@ const Story = ({ story: { id, by, title, kids, time, url } }) => {
       <div className="story-info">
         <span>
           by{' '}
-          <Link url={`https://news.ycombinator.com/user?id=${by}`} title={by} />
+          <Link url={'https://news.ycombinator.com/user?id=${by}'} title={by} />
         </span>
         |<span>
           {new Date(time * 1000).toLocaleDateString('en-US', {
@@ -25,8 +25,8 @@ const Story = ({ story: { id, by, title, kids, time, url } }) => {
         </span>|
         <span>
           <Link
-            url={`https://news.ycombinator.com/item?id=${id}`}
-            title={`${kids && kids.length > 0 ? kids.length : 0} comments`}
+            url={'https://news.ycombinator.com/item?id=${id}'}
+            title={'${kids && kids.length > 0 ? kids.length : 0} comments'}
           />
         </span>
       </div>
