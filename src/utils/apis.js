@@ -18,6 +18,6 @@ export const getStories = async (type) => {
     const stories = await Promise.all(storyIds.slice(0, 30).map(getStory));
     return stories;
   } catch (error) {
-    console.log('Error while getting list of stories.');
+    console.log('Error while getting list of stories..');
   }
 };
