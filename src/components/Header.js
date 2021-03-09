@@ -1,18 +1,24 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink }  from 'react-router-dom';
+import  {navMenu} from './DummyData';
 
 
-const Header = () => {
+
+const Header = () =>{
+
     return(
-    <React.Fragment>
-     <h1>Title</h1>
-     <div className="nav-link">
-         <NavLink to="/top" activeClassName="active">Top Stories</NavLink>
-         <NavLink to="/new" activeClassName="active">Latest Stories</NavLink>
-         <NavLink to="/best" activeClassName="active">Best Stories</NavLink>
-     </div>
-    </React.Fragment>
-    );
-};
 
+        <React.Fragment>
+            <h1>Page Title</h1>
+        <div className="nav-link">
+            {navMenu.map(menu =>(
+                <NavLink key={menu.id} to={"./" + menu.location} activeClassName="active">{menu.title}</NavLink>
+            ))}
+        </div>
+        </React.Fragment>
+
+
+    );
+
+}
 export default Header
